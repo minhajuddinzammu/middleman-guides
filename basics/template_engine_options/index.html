@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Middleman: Template Engine Options</title>
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic|Source+Code+Pro">
+    <link href="/stylesheets/site.css" rel="stylesheet" />
+  </head>
+  <body>
+      <header id="header">
+    <nav class="global-nav" role="navigation">
+  <section class="wrap-container">
+    <header class="global-nav-item logo-text">
+      <a class="global-nav-middleman-signature" href="/">Middleman</a>
+      <a class="global-nav-middleman-logo" href="/"><img src="/images/middleman-logo.svg" /></a>
+    </header>
+
+    <ul class="global-nav-list">
+      <li class="global-nav-item">
+        <a href="/community/">Contribute</a>
+      </li>
+      <li class="global-nav-item">
+        <a class="cta-link-nav" href="/basics/install/">Docs</a>
+      </li>
+    </ul>
+  </section>
+</nav>
+
+  </header>
+
+  <div class="body-content-container wrap-container" role="main">
+    <nav id="toc" class="sidebar" data-waypoint="sidebar">
+      <div id="search" role="search">
+  <form>
+    <input class="st-search-input" id="st-search-input" type="search" placeholder="Search the docs">
+  </form>
+  <div id="st-results-container"></div>
+  <script>
+    var Swiftype = window.Swiftype || {};
+    (function() {
+    Swiftype.key = 'q3qjGN5LmX2oq6w1V47y';
+    Swiftype.inputElement = '#st-search-input';
+    Swiftype.resultContainingElement = '#st-results-container';
+    Swiftype.attachElement = '#st-search-input';
+    Swiftype.renderStyle = "overlay";
+
+    var script = document.createElement('script');
+    script.type = 'text/javascript';
+    script.async = true;
+    script.src = "//swiftype.com/embed.js";
+    var entry = document.getElementsByTagName('script')[0];
+    entry.parentNode.insertBefore(script, entry);
+    }());
+  </script>
+</div>
+
+<div class="toc-block-container">
+  <div class="toc-block">
+    <h3 class="docs-section-heading">Basics</h3>
+    <ul>
+      <li class="doc-item">
+        <a href="/basics/install/">Install</a> </li>
+      <li class="doc-item">
+        <a href="/basics/upgrade-v4/">Upgrading to v4</a> </li>
+      <li class="doc-item">
+        <a href="/basics/start_new_site/">Start a New Site</a>
+      </li>
+      <li class="doc-item">
+        <a href="/basics/directory-structure/">Directory Structure</a>
+      </li>
+      <li class="doc-item" >
+        <a href="/basics/development_cycle/">Development Cycle</a>
+      </li>
+      <li class="doc-item">
+        <a href="/basics/build_and_deploy/">Build & Deploy</a>
+        </li>
+      <li class="doc-item">
+        <a href="/basics/frontmatter/">Frontmatter</a>
+        </li>
+      <li class="doc-item">
+        <a href="/basics/templating_language/">Templating Language</a>
+        </li>
+      <li class="doc-item">
+        <a href="/basics/helper_methods/">Helper Methods</a>
+        </li>
+      <li class="doc-item">
+        <a href="/basics/layouts/">Layouts</a>
+        </li>
+      <li class="doc-item">
+        <a href="/basics/partials/">Partials</a>
+        </li>
+      <li class="doc-item">
+        <a href="/basics/blogging/">Blogging</a>
+        </li>
+    </ul>
+  </div>
+
+  <div class="toc-block">
+    <h3 class="docs-section-heading">Advanced</h3>
+    <ul>
+      <li class="doc-item">
+        <a href="/advanced/configuration/">Configuring Your Site</a>
+        </li>
+      <li class="doc-item">
+        <a href="/advanced/project_templates/">Project Templates</a>
+        </li>
+      <li class="doc-item">
+        <a href="/advanced/dynamic_pages/">Dynamic Pages</a>
+        </li>
+      <li class="doc-item">
+        <a href="/advanced/data_files/">Data Files</a>
+        </li>
+      <li class="doc-item">
+        <a href="/advanced/localization/">Localization (i18n)</a>
+        </li>
+      <li class="doc-item">
+        <a href="/advanced/asset_pipeline/">Asset Pipeline</a>
+        </li>
+      <li class="doc-item">
+        <a href="/advanced/rack_middleware/">Rack Middleware</a>
+        </li>
+      <li class="doc-item">
+        <a href="/advanced/sitemap/">The Sitemap</a>
+        </li>
+      <li class="doc-item">
+        <a href="/advanced/pretty_urls/">Pretty URLs (Directory Indexes)</a>
+        </li>
+      <li class="doc-item">
+        <a href="/advanced/improving_cacheability/">Improving Cacheability</a>
+        </li>
+      <li class="doc-item">
+        <a href="/advanced/file_size_optimization/">File Size Optimization</a>
+        </li>
+      <li class="doc-item">
+        <a href="/advanced/custom_extensions/">Custom Extensions</a>
+        </li>
+    </ul>
+  </div>
+
+  <div class="toc-block">
+    <h3 class="docs-section-heading">Open-Source Community</h3>
+    <ul>
+      <li class="doc-item">
+        <a href="https://directory.middlemanapp.com/#/extensions/all/">Custom Extensions</a>
+      </li>
+      <li class="doc-item">
+        <a href="https://directory.middlemanapp.com/#/templates/all/">Project Templates</a>
+        </li>
+      <li class="doc-item">
+        <a href="https://directory.middlemanapp.com/#/extensions/deployment/">Deployment Solution</a>
+        </li>
+      <li class="doc-item">
+        <a target="_blank" href="https://forum.middlemanapp.com/">Community Forum</a>
+        </li>
+      <li class="doc-item">
+        <a target="_blank" href="https://github.com/middleman/middleman">GitHub Repository</a>
+        </li>
+      <li class="doc-item">
+        <a href="/community/built_using_middleman/">Sites Built Using Middleman</a>
+        </li>
+    </ul>
+  </div>
+</div>
+
+    </nav>
+
+    <main class="main" role="main" data-waypoint="main">
+      <h2 id="template-engine-options">Template Engine Options</h2>
+
+<p>You can set options for the various template engines in your <code>config.rb</code>:</p>
+
+<pre><code class="ruby">set :haml, { :ugly =&gt; true, :format =&gt; :html5 }
+</code></pre>
+
+<h2 id="markdown">Markdown</h2>
+
+<p>You can choose your favorite Markdown library and set options for it in <code>config.rb</code>:</p>
+
+<pre><code class="ruby">set :markdown_engine, :redcarpet
+set :markdown, :fenced_code_blocks =&gt; true, :smartypants =&gt; true
+</code></pre>
+
+<p>When using RedCarpet, Middleman will handle links and image tags with its own helpers, meaning things like <code>:relative_links</code> and <code>:asset_hash</code> will do what you expect. However, the default Markdown engine is Kramdown because it&#39;s easier to install.</p>
+
+<h2 id="other-templating-languages">Other Templating Languages</h2>
+
+<p>Here is the list of Tilt-enabled templating languages and the RubyGems which must be installed (and required in <code>config.rb</code>) for them to work (this list is from <a href="https://github.com/rtomayko/tilt/">Tilt</a>):</p>
+
+<table><thead>
+<tr>
+<th>ENGINE</th>
+<th>FILE EXTENSIONS</th>
+<th>REQUIRED LIBRARIES</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Slim</td>
+<td>.slim</td>
+<td>slim</td>
+</tr>
+<tr>
+<td>Erubis</td>
+<td>.erb, .rhtml, .erubis</td>
+<td>erubis</td>
+</tr>
+<tr>
+<td>Less CSS</td>
+<td>.less</td>
+<td>less</td>
+</tr>
+<tr>
+<td>Builder</td>
+<td>.builder</td>
+<td>builder</td>
+</tr>
+<tr>
+<td>Liquid</td>
+<td>.liquid</td>
+<td>liquid</td>
+</tr>
+<tr>
+<td>RDiscount</td>
+<td>.markdown, .mkd, .md</td>
+<td>rdiscount</td>
+</tr>
+<tr>
+<td>Redcarpet</td>
+<td>.markdown, .mkd, .md</td>
+<td>redcarpet</td>
+</tr>
+<tr>
+<td>BlueCloth</td>
+<td>.markdown, .mkd, .md</td>
+<td>bluecloth</td>
+</tr>
+<tr>
+<td>Kramdown</td>
+<td>.markdown, .mkd, .md</td>
+<td>kramdown</td>
+</tr>
+<tr>
+<td>Maruku</td>
+<td>.markdown, .mkd, .md</td>
+<td>maruku</td>
+</tr>
+<tr>
+<td>RedCloth</td>
+<td>.textile</td>
+<td>redcloth</td>
+</tr>
+<tr>
+<td>RDoc</td>
+<td>.rdoc</td>
+<td>rdoc</td>
+</tr>
+<tr>
+<td>Radius</td>
+<td>.radius</td>
+<td>radius</td>
+</tr>
+<tr>
+<td>Markaby</td>
+<td>.mab</td>
+<td>markaby</td>
+</tr>
+<tr>
+<td>Nokogiri</td>
+<td>.nokogiri</td>
+<td>nokogiri</td>
+</tr>
+<tr>
+<td>CoffeeScript</td>
+<td>.coffee</td>
+<td>coffee-script</td>
+</tr>
+<tr>
+<td>Creole (Wiki markup)</td>
+<td>.wiki, .creole</td>
+<td>creole</td>
+</tr>
+<tr>
+<td>WikiCloth (Wiki markup)</td>
+<td>.wiki, .mediawiki, .mw</td>
+<td>wikicloth</td>
+</tr>
+<tr>
+<td>Yajl</td>
+<td>.yajl</td>
+<td>yajl-ruby</td>
+</tr>
+<tr>
+<td>Stylus</td>
+<td>.styl</td>
+<td>stylus</td>
+</tr>
+</tbody></table>
+
+    </main>
+  </div>
+
+    <footer class="footer" data-waypoint="footer" role="contentinfo">
+  <div class="wrap-container">
+    <div class="footer-column">
+      <article class="footer-site-information">
+        <p>
+          &copy; 2011&ndash;2015 <a href="//awardwinningfjords.com">Thomas Reynolds</a>
+        </p>
+        <p class="footer-open-source-credit">
+          Maintained by the <a href="//github.com/orgs/middleman/people">core team</a> with help from
+            <a href="//github.com/middleman/middleman/graphs/contributors">contributors</a>.
+        </p>
+      </article>
+      <article class="footer-contact">
+        <ul class="footer-contact-list">
+          <li class="footer-contact-list-item twitter-link">
+            <a href="//twitter.com/middlemanapp">@middlemanapp</a>
+          </li>
+          <li class="footer-contact-list-item github-link">
+            <a href="//github.com/middleman/middleman">GitHub</a>
+          </li>
+        </ul>
+      </article>
+    </div>
+    <div class="footer-column footer-right">
+      <a href="https://formkeep.com?utm_source=middleman">
+        <span class="footer-formkeep-logo"></span>
+      </a>
+      <p class="footer-credit">
+        FormKeep provides
+
+        <a href="https://formkeep.com/?utm_source=middleman">form endpoints for Middleman sites</a>.
+      </p>
+    </div>
+  </div>
+</footer>
+
+    <script src="/javascripts/site.js"></script>
+    <script>
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-90027-21']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script');
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    ga.setAttribute('async', 'true');
+    document.documentElement.firstChild.appendChild(ga);
+  })();
+</script>
+<script>
+  var _gauges = _gauges || [];
+  (function() {
+    var t   = document.createElement('script');
+    t.type  = 'text/javascript';
+    t.async = true;
+    t.id    = 'gauges-tracker';
+    t.setAttribute('data-site-id', '4ef39d56613f5d017b000004');
+    t.src = '//secure.gaug.es/track.js';
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(t, s);
+  })();
+</script>
+  </body>
+</html>

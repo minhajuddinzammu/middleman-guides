@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Middleman: Upgrading to v4</title>
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic|Source+Code+Pro">
+    <link href="/stylesheets/site.css" rel="stylesheet" />
+  </head>
+  <body>
+      <header id="header">
+    <nav class="global-nav" role="navigation">
+  <section class="wrap-container">
+    <header class="global-nav-item logo-text">
+      <a class="global-nav-middleman-signature" href="/">Middleman</a>
+      <a class="global-nav-middleman-logo" href="/"><img src="/images/middleman-logo.svg" /></a>
+    </header>
+
+    <ul class="global-nav-list">
+      <li class="global-nav-item">
+        <a href="/community/">Contribute</a>
+      </li>
+      <li class="global-nav-item">
+        <a class="cta-link-nav" href="/basics/install/">Docs</a>
+      </li>
+    </ul>
+  </section>
+</nav>
+
+  </header>
+
+  <div class="body-content-container wrap-container" role="main">
+    <nav id="toc" class="sidebar" data-waypoint="sidebar">
+      <div id="search" role="search">
+  <form>
+    <input class="st-search-input" id="st-search-input" type="search" placeholder="Search the docs">
+  </form>
+  <div id="st-results-container"></div>
+  <script>
+    var Swiftype = window.Swiftype || {};
+    (function() {
+    Swiftype.key = 'q3qjGN5LmX2oq6w1V47y';
+    Swiftype.inputElement = '#st-search-input';
+    Swiftype.resultContainingElement = '#st-results-container';
+    Swiftype.attachElement = '#st-search-input';
+    Swiftype.renderStyle = "overlay";
+
+    var script = document.createElement('script');
+    script.type = 'text/javascript';
+    script.async = true;
+    script.src = "//swiftype.com/embed.js";
+    var entry = document.getElementsByTagName('script')[0];
+    entry.parentNode.insertBefore(script, entry);
+    }());
+  </script>
+</div>
+
+<div class="toc-block-container">
+  <div class="toc-block">
+    <h3 class="docs-section-heading">Basics</h3>
+    <ul>
+      <li class="doc-item">
+        <a href="/basics/install/">Install</a> </li>
+      <li class="doc-item">
+        <a href="/basics/upgrade-v4/">Upgrading to v4</a> </li>
+      <li class="doc-item">
+        <a href="/basics/start_new_site/">Start a New Site</a>
+      </li>
+      <li class="doc-item">
+        <a href="/basics/directory-structure/">Directory Structure</a>
+      </li>
+      <li class="doc-item" >
+        <a href="/basics/development_cycle/">Development Cycle</a>
+      </li>
+      <li class="doc-item">
+        <a href="/basics/build_and_deploy/">Build & Deploy</a>
+        </li>
+      <li class="doc-item">
+        <a href="/basics/frontmatter/">Frontmatter</a>
+        </li>
+      <li class="doc-item">
+        <a href="/basics/templating_language/">Templating Language</a>
+        </li>
+      <li class="doc-item">
+        <a href="/basics/helper_methods/">Helper Methods</a>
+        </li>
+      <li class="doc-item">
+        <a href="/basics/layouts/">Layouts</a>
+        </li>
+      <li class="doc-item">
+        <a href="/basics/partials/">Partials</a>
+        </li>
+      <li class="doc-item">
+        <a href="/basics/blogging/">Blogging</a>
+        </li>
+    </ul>
+  </div>
+
+  <div class="toc-block">
+    <h3 class="docs-section-heading">Advanced</h3>
+    <ul>
+      <li class="doc-item">
+        <a href="/advanced/configuration/">Configuring Your Site</a>
+        </li>
+      <li class="doc-item">
+        <a href="/advanced/project_templates/">Project Templates</a>
+        </li>
+      <li class="doc-item">
+        <a href="/advanced/dynamic_pages/">Dynamic Pages</a>
+        </li>
+      <li class="doc-item">
+        <a href="/advanced/data_files/">Data Files</a>
+        </li>
+      <li class="doc-item">
+        <a href="/advanced/localization/">Localization (i18n)</a>
+        </li>
+      <li class="doc-item">
+        <a href="/advanced/asset_pipeline/">Asset Pipeline</a>
+        </li>
+      <li class="doc-item">
+        <a href="/advanced/rack_middleware/">Rack Middleware</a>
+        </li>
+      <li class="doc-item">
+        <a href="/advanced/sitemap/">The Sitemap</a>
+        </li>
+      <li class="doc-item">
+        <a href="/advanced/pretty_urls/">Pretty URLs (Directory Indexes)</a>
+        </li>
+      <li class="doc-item">
+        <a href="/advanced/improving_cacheability/">Improving Cacheability</a>
+        </li>
+      <li class="doc-item">
+        <a href="/advanced/file_size_optimization/">File Size Optimization</a>
+        </li>
+      <li class="doc-item">
+        <a href="/advanced/custom_extensions/">Custom Extensions</a>
+        </li>
+    </ul>
+  </div>
+
+  <div class="toc-block">
+    <h3 class="docs-section-heading">Open-Source Community</h3>
+    <ul>
+      <li class="doc-item">
+        <a href="https://directory.middlemanapp.com/#/extensions/all/">Custom Extensions</a>
+      </li>
+      <li class="doc-item">
+        <a href="https://directory.middlemanapp.com/#/templates/all/">Project Templates</a>
+        </li>
+      <li class="doc-item">
+        <a href="https://directory.middlemanapp.com/#/extensions/deployment/">Deployment Solution</a>
+        </li>
+      <li class="doc-item">
+        <a target="_blank" href="https://forum.middlemanapp.com/">Community Forum</a>
+        </li>
+      <li class="doc-item">
+        <a target="_blank" href="https://github.com/middleman/middleman">GitHub Repository</a>
+        </li>
+      <li class="doc-item">
+        <a href="/community/built_using_middleman/">Sites Built Using Middleman</a>
+        </li>
+    </ul>
+  </div>
+</div>
+
+    </nav>
+
+    <main class="main" role="main" data-waypoint="main">
+      <p><strong>The v4 series is currently in beta. You don&#39;t need to upgrade any time soon, but we&#39;d love extension authors to begin experimenting with the new APIs. The current release is <code>v4.0.0.rc.1</code></strong> Check the <a href="https://github.com/middleman/middleman/blob/master/CHANGELOG.md">changelog</a> for a list of merged changes.</p>
+
+<h1 id="upgrading-to-v4">Upgrading to v4</h1>
+
+<p>With version 4, we&#39;re removing a lot of lesser used features in the core and replacing them with either better-supporting approaches which already existed or moving that functionality into an extension.</p>
+
+<p>This upgrade documentation is a work in progress and will evolve along side the v4 betas. If the upgrade path for any of the removed features is confusing or not an option for your codebase, please let us know and we can take another look at either the docs or the decision to remove it.</p>
+
+<p>Here&#39;s the list:</p>
+
+<ul>
+<li>Removed the <code>proxy</code> and <code>ignore</code> options for the <code>page</code> command in <code>config.rb</code>. Use the <code>proxy</code> and <code>ignore</code> commands instead of passing these options to <code>page</code>.</li>
+<li>Removed <code>with_layout</code> in config. Use loops of <code>page</code> instead.</li>
+<li>Removed Queryable Sitemap API</li>
+<li>Removed <code>css_compressor</code> setting, use <code>activate :minify_css, :compressor =&gt;</code> instead.</li>
+<li>Removed <code>js_compressor</code> setting, use <code>activate :minify_javascript, :compressor =&gt;</code> instead.</li>
+<li>Removed ability to server folders of content statically (non-Middleman projects).</li>
+<li>Removed &quot;Implied Extension feature&quot;, all templates must include a full file name plus the list of desired templating extensions.</li>
+<li>Remove <code>upgrade</code> and <code>install</code> CLI commands.</li>
+<li>Remove <code>page</code> template local. Use <code>current_resource</code> instead.</li>
+<li>Dropped support for providing a block to <code>page</code> &amp; <code>proxy</code>.</li>
+<li>Dropped support for instance variables inside templates.</li>
+<li>Remove deprecated <code>request</code> instance</li>
+<li>Remove old module-style extension support</li>
+<li>Moved Compass into an extension, still bundled by default.</li>
+<li>The <code>after_build</code> block now returns a <code>Middleman::Builder</code> instance which is completely abstracted away from the CLI and Thor. If you need a copy of Thor to run addition also tasks or do a simple <code>create_file</code>, it is available as <code>.thor</code>. For example: <code>after_build { |builder| builder.thor.create_file(...) }</code></li>
+</ul>
+
+<p>Lots of code was touched during the v4 refactors. If you were relying on internal methods which were not mentioned above or described on this documentation site, there is a possibility things have changed. Please reach out if you have questions.</p>
+
+<h2 id="environments-and-changes-to-configure-blocks">Environments and Changes to <code>configure</code> blocks.</h2>
+
+<p>v4 adds the ability to differentiate between different target environments. In the past, we conflated the environment <code>development</code> and the output mode <code>build</code> as the two ways to target config changes.</p>
+
+<p>What we are doing in v4 separates these. There are 2 default environments now, <code>development</code> and <code>production</code>, but you can easily add your own. There are 2 default output modes as well, <code>server</code> and <code>build</code>.</p>
+
+<p>The <code>middleman server</code> command defaults to the mode of <code>server</code> and the environment of <code>development</code>.</p>
+
+<p>The <code>middleman build</code> command defaults to the mode of <code>build</code> and the environment of <code>production</code>.</p>
+
+<p>The <code>configure</code> command can target both environments and modes:</p>
+
+<pre><code>configure :server { #enable sprockets debugging }
+configure :build { # run some post-build hooks }
+configure :development { # enable some sass debug settings }
+configure :production { activate :minify_html }
+</code></pre>
+
+<p>This adaptation will probably affect the largest number of Middleman users.</p>
+
+<p>Like Rails, we support automatically loading environment specific config from a predefined path. If you have a lot of production config, create a file at <code>environments/production.rb</code> and its contents will automatically be evaluated when in production.</p>
+
+<p>It is also possible to change the environment regardless of the output mode. So now, you can preview the production output in the dev server: <code>middleman server -e production</code></p>
+
+<p>The <code>-e</code> environment flag is also used for custom environments. Say you want to push some code to staging, you could use: <code>middleman build -e staging</code> and the <code>environments/staging.rb</code> could have staging-specific deploy scripts.</p>
+
+<h2 id="file-updates-in-rack-servers">File Updates in Rack servers</h2>
+
+<p>This refactor allows Middleman to run as a Rack server and still update on file changes normally. This makes mounting inside Rails or using the Pow server much nicer.</p>
+
+<h2 id="installing-templates-from-git">Installing Templates from Git</h2>
+
+<p>We&#39;re removed the ability to create custom reusable templates from either <code>~/.middleman</code> or gems. Instead, <code>middleman init</code> now takes the <code>-T</code> flag which points to any Git repository. If the path does not contain a protocol <code>://</code>, then we will assume it is hosted on Github.</p>
+
+<pre><code>middleman init -T tdreyno/my-middleman-starter ~/Sites/new-site
+</code></pre>
+
+<p>This should make sharing templates much easier. We also allow the mapping of custom names to Git repositors for all projects submitted to our Directory site. For example:</p>
+
+<pre><code>middleman init -T amicus ~/Sites/new-site
+</code></pre>
+
+<h2 id="external-tools">External Tools</h2>
+
+<p>We want to support as many possible tools as we can. Want to run Grunt? Maybe ClojureScript JVM in the background? How about browserify or ember-cli? That&#39;s what the goal of <code>external_pipeline</code> is. Here&#39;s an example of how Middleman v4 can control an external process, which outputs into an arbitrary directory and is then consumed by Middleman:</p>
+
+<pre><code>activate :external_pipeline,
+  name: :ember,
+  command: &quot;cd test-app/ &amp;&amp; ember #{build? ? :build : :serve} --environment #{config[:environment]}&quot;,
+  source: &quot;test-app/dist&quot;,
+  latency: 2
+</code></pre>
+
+<p>This is pretty experimental and will need a lot of love before the final release. This feature is hosted on top of a lower-level feature which allows multiple directories to be overlaid to create the combined sitemap for Middleman. This is great for keeping things like <code>bower_components</code> separate from your source directory, but still available to Middleman:</p>
+
+<pre><code>files.watch :source, path: File.expand_path(&#39;bower_components&#39;, app.root)
+</code></pre>
+
+<h2 id="collections">Collections</h2>
+
+<p>The final new feature is &quot;Collections&quot;. Collections abstract some logic from Middleman Blog to allow you to define groups of files and paths, in pure Ruby, which can then be acted upon. This works around a common new user mistake where they assume <code>config.rb</code> is executed whenever anything changes, rather than once on startup. Collections give the illusion that anything you write in <code>config.rb</code> is always up to date.</p>
+
+<p>Lets say you want to implement tagging:</p>
+
+<pre><code>def get_tags(resource)
+  if resource.data.tags.is_a? String
+    resource.data.tags.split(&#39;,&#39;).map(&amp;:strip)
+  else
+    resource.data.tags
+  end
+end
+
+def group_lookup(resource, sum)
+  results = Array(get_tags(resource)).map(&amp;:to_s).map(&amp;:to_sym)
+
+  results.each do |k|
+    sum[k] ||= []
+    sum[k] &lt;&lt; resource
+  end
+end
+
+tags = resources
+  .select { |resource| resource.data.tags }
+  .each_with_object({}, &amp;method(:group_lookup))
+
+collection :all_tags, tags
+collection :first_tag, tags.keys.sort.first
+</code></pre>
+
+<p>This will give you an always up-to-date hash called <code>all_tags</code> and an always up-to-date array representing the current resources which have the first alphabetical tag. As you can see, all the code is normal Ruby, so you can write your implementation however you&#39;d like. The only 2 constraints are that a collection must be made from a chained collection starting with <code>resources</code> and that the <code>collection</code> method must be called when you are done to pass the information into your templates.</p>
+
+<pre><code>&lt;% collection(:tags).each do |k, items| %&gt;
+  Tag: &lt;%= k %&gt; (&lt;%= items.length %&gt;)
+  &lt;% items.each do |article| %&gt;
+    Article: &lt;%= article.data.title %&gt;
+  &lt;% end %&gt;
+&lt;% end %&gt;
+
+First Tag: &lt;%= collection(:first_tag) %&gt;
+</code></pre>
+
+<p>Collections can also be used, directly in <code>config.rb</code> to keep dynamic pages up-to-date:</p>
+
+<pre><code>tags.each do |k, articles|
+  proxy &quot;/tags/#{k}.html&quot;, &quot;/tags/list.html&quot;, locals: {
+    articles: articles
+  }
+end
+</code></pre>
+
+<p>Again, Collections are very new and experimental. You can help influence the direction of the feature over the beta period.</p>
+
+<h2 id="extension-api-improvements">Extension API Improvements</h2>
+
+<h3 id="context-methods">Context Methods</h3>
+
+<p>In v4, the Application, Template Context and Config Context are all separated to avoid poluting a single shared instance with different concerns. In the past, it was possible for templates to add instance variables to the App, which resulted in some nasty naming collisions.</p>
+
+<p>Now, each context has it&#39;s own sandbox. Extensions may want to add methods to these scopes:</p>
+
+<ul>
+<li><p><code>expose_to_application :external_name =&gt; :internal_name</code> will create an <code>app.external_name</code> method which maps to the extension&#39;s public <code>internal_name</code> method. This should probably never be used outside of Middleman core (<code>app.data</code> primarily), but it&#39;s here if you need it.</p></li>
+<li><p><code>expose_to_config :external_name =&gt; :internal_name</code> will create a <code>external_name</code> method which maps to the extension&#39;s public <code>internal_name</code> method. This method will be available inside <code>config.rb</code>.</p></li>
+<li><p><code>expose_to_template :external_name =&gt; :internal_name</code> will create a <code>external_name</code> method which maps to the extension&#39;s public <code>internal_name</code> method. This method will be available inside the templating engines. This is very similar to the <code>helpers</code> method (which still exists), but this version will auto-bind the method into your extension context.</p></li>
+</ul>
+
+<h3 id="simple-resource-creation">Simple Resource Creation</h3>
+
+<p><code>manipulate_resource_list</code> is great, but often more complex than most extensions need. Now, we have a way to simply create a resource with string contents.</p>
+
+<ul>
+<li><p><code>resources :more_pages</code> will call the <code>more_pages</code> method inside your extension. That method is expected to return a Hash where the keys are the output URLs and the values are either a String of a Symbol representing another internal method.</p>
+
+<pre><code>resources :more_pages
+
+def more_pages
+    {
+        &quot;/page1.html&quot; =&gt; :page1,
+        &quot;/page2.html&quot; =&gt; &quot;Hello&quot;
+    }
+end
+
+def page1
+    &quot;Page 1&quot;
+end
+</code></pre></li>
+<li><p><code>resources &quot;/page1.html&quot; =&gt; &quot;greetings&quot;</code> is a shorthand form of the above. The method takes a Hash of paths to symbols or strings.</p></li>
+</ul>
+
+    </main>
+  </div>
+
+    <footer class="footer" data-waypoint="footer" role="contentinfo">
+  <div class="wrap-container">
+    <div class="footer-column">
+      <article class="footer-site-information">
+        <p>
+          &copy; 2011&ndash;2015 <a href="//awardwinningfjords.com">Thomas Reynolds</a>
+        </p>
+        <p class="footer-open-source-credit">
+          Maintained by the <a href="//github.com/orgs/middleman/people">core team</a> with help from
+            <a href="//github.com/middleman/middleman/graphs/contributors">contributors</a>.
+        </p>
+      </article>
+      <article class="footer-contact">
+        <ul class="footer-contact-list">
+          <li class="footer-contact-list-item twitter-link">
+            <a href="//twitter.com/middlemanapp">@middlemanapp</a>
+          </li>
+          <li class="footer-contact-list-item github-link">
+            <a href="//github.com/middleman/middleman">GitHub</a>
+          </li>
+        </ul>
+      </article>
+    </div>
+    <div class="footer-column footer-right">
+      <a href="https://formkeep.com?utm_source=middleman">
+        <span class="footer-formkeep-logo"></span>
+      </a>
+      <p class="footer-credit">
+        FormKeep provides
+
+        <a href="https://formkeep.com/?utm_source=middleman">form endpoints for Middleman sites</a>.
+      </p>
+    </div>
+  </div>
+</footer>
+
+    <script src="/javascripts/site.js"></script>
+    <script>
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-90027-21']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script');
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    ga.setAttribute('async', 'true');
+    document.documentElement.firstChild.appendChild(ga);
+  })();
+</script>
+<script>
+  var _gauges = _gauges || [];
+  (function() {
+    var t   = document.createElement('script');
+    t.type  = 'text/javascript';
+    t.async = true;
+    t.id    = 'gauges-tracker';
+    t.setAttribute('data-site-id', '4ef39d56613f5d017b000004');
+    t.src = '//secure.gaug.es/track.js';
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(t, s);
+  })();
+</script>
+  </body>
+</html>

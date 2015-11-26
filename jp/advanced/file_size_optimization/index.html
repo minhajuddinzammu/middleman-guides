@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Middleman: ファイルサイズ最適化</title>
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic|Source+Code+Pro">
+    <link href="/stylesheets/site.css" rel="stylesheet" />
+  </head>
+  <body>
+      <header id="header">
+    <nav class="global-nav" role="navigation">
+  <section class="wrap-container">
+    <header class="global-nav-item logo-text">
+      <a class="global-nav-middleman-signature" href="/jp/">Middleman</a>
+      <a class="global-nav-middleman-logo" href="/jp/"><img src="/images/middleman-logo.svg" /></a>
+    </header>
+
+    <ul class="global-nav-list">
+      <li class="global-nav-item">
+        <a href="/jp/community/">Contribute</a>
+      </li>
+      <li class="global-nav-item">
+        <a class="cta-link-nav" href="/jp/basics/install/">Docs</a>
+      </li>
+    </ul>
+  </section>
+</nav>
+
+  </header>
+
+  <div class="body-content-container wrap-container" role="main">
+    <nav id="toc" class="sidebar" data-waypoint="sidebar">
+      <div id="search" role="search">
+  <form>
+    <input class="st-search-input" id="st-search-input" type="search" placeholder="Search the docs">
+  </form>
+  <div id="st-results-container"></div>
+  <script>
+    var Swiftype = window.Swiftype || {};
+    (function() {
+    Swiftype.key = 'q3qjGN5LmX2oq6w1V47y';
+    Swiftype.inputElement = '#st-search-input';
+    Swiftype.resultContainingElement = '#st-results-container';
+    Swiftype.attachElement = '#st-search-input';
+    Swiftype.renderStyle = "overlay";
+
+    var script = document.createElement('script');
+    script.type = 'text/javascript';
+    script.async = true;
+    script.src = "//swiftype.com/embed.js";
+    var entry = document.getElementsByTagName('script')[0];
+    entry.parentNode.insertBefore(script, entry);
+    }());
+  </script>
+</div>
+
+<div class="toc-block-container">
+  <div class="toc-block">
+    <h3 class="docs-section-heading">基礎</h3>
+    <ul>
+      <li class="doc-item">
+        <a href="/jp/basics/install/">インストール</a> </li>
+      <li class="doc-item">
+        <a href="/jp/basics/upgrade-v4/">v4 へのアップグレード</a> </li>
+      <li class="doc-item">
+        <a href="/jp/basics/start_new_site/">新しいサイトの作成</a>
+      </li>
+      <li class="doc-item">
+        <a href="/jp/basics/directory-structure/">ディレクトリ構造</a>
+      </li>
+      <li class="doc-item" >
+        <a href="/jp/basics/development_cycle/">開発サイクル</a>
+      </li>
+      <li class="doc-item">
+        <a href="/jp/basics/build_and_deploy/">ビルド & デプロイ</a>
+        </li>
+      <li class="doc-item">
+        <a href="/jp/basics/frontmatter/">Frontmatter</a>
+        </li>
+      <li class="doc-item">
+        <a href="/jp/basics/templating_language/">テンプレート言語</a>
+        </li>
+      <li class="doc-item">
+        <a href="/jp/basics/helper_methods/">ヘルパーメソッド</a>
+        </li>
+      <li class="doc-item">
+        <a href="/jp/basics/layouts/">レイアウト</a>
+        </li>
+      <li class="doc-item">
+        <a href="/jp/basics/partials/">パーシャル</a>
+        </li>
+      <li class="doc-item">
+        <a href="/jp/basics/blogging/">ブログ機能</a>
+        </li>
+    </ul>
+  </div>
+
+  <div class="toc-block">
+    <h3 class="docs-section-heading">高度な機能</h3>
+    <ul>
+      <li class="doc-item">
+        <a href="/jp/advanced/configuration/">設定</a>
+        </li>
+      <li class="doc-item">
+        <a href="/jp/advanced/project_templates/">プロジェクトテンプレート</a>
+        </li>
+      <li class="doc-item">
+        <a href="/jp/advanced/dynamic_pages/">動的ページ</a>
+        </li>
+      <li class="doc-item">
+        <a href="/jp/advanced/data_files/">データファイル</a>
+        </li>
+      <li class="doc-item">
+        <a href="/jp/advanced/localization/">多言語化 (i18n)</a>
+        </li>
+      <li class="doc-item">
+        <a href="/jp/advanced/asset_pipeline/">アセットパイプライン</a>
+        </li>
+      <li class="doc-item">
+        <a href="/jp/advanced/rack_middleware/">Rack ミドルウェア</a>
+        </li>
+      <li class="doc-item">
+        <a href="/jp/advanced/sitemap/">サイトマップ</a>
+        </li>
+      <li class="doc-item">
+        <a href="/jp/advanced/pretty_urls/">きれいな URL (ディレクトリインデックス)</a>
+        </li>
+      <li class="doc-item">
+        <a href="/jp/advanced/improving_cacheability/">キャッシュ機能の改善</a>
+        </li>
+      <li class="doc-item">
+        <a href="/jp/advanced/file_size_optimization/">ファイルサイズ最適化</a>
+        </li>
+      <li class="doc-item">
+        <a href="/jp/advanced/custom_extensions/">カスタム拡張</a>
+        </li>
+    </ul>
+  </div>
+
+  <div class="toc-block">
+    <h3 class="docs-section-heading">コミュニティ</h3>
+    <ul>
+      <li class="doc-item">
+        <a href="https://directory.middlemanapp.com/#/extensions/all/">拡張機能</a>
+      </li>
+      <li class="doc-item">
+        <a href="https://directory.middlemanapp.com/#/templates/all/">プロジェクトテンプレート</a>
+        </li>
+      <li class="doc-item">
+        <a href="https://directory.middlemanapp.com/#/extensions/deployment/">デプロイ方法</a>
+        </li>
+      <li class="doc-item">
+        <a target="_blank" href="https://forum.middlemanapp.com/">コミュニティフォーラム</a>
+        </li>
+      <li class="doc-item">
+        <a target="_blank" href="https://github.com/middleman/middleman">GitHub リポジトリ</a>
+        </li>
+      <li class="doc-item">
+        <a href="/jp/community/built_using_middleman/">Middleman 採用サイト</a>
+        </li>
+    </ul>
+  </div>
+</div>
+
+    </nav>
+
+    <main class="main" role="main" data-waypoint="main">
+      <h1 id="ファイルサイズ最適化">ファイルサイズ最適化</h1>
+
+<h2 id="css-と-javascript-の圧縮">CSS と JavaScript の圧縮</h2>
+
+<p>Middleman は CSS のミニファイや JavaScript の圧縮処理を行うので, ファイル最適化について
+心配する必要はありません。ほとんどのライブラリはデプロイを行うユーザのために
+ミニファイや圧縮されたバージョンを用意していますが, そのファイルは読めなかったり
+編集できなかったりします。Middleman はプロジェクトの中にコメント付きの
+オリジナルファイルを取っておくので, 必要に応じて読んだり編集することができます。
+そして, プロジェクトのビルド時には Middleman は最適化処理を行います。</p>
+
+<p><code>config.rb</code> で, サイトのビルド時に <code>minify_css</code> 機能と <code>minify_javascript</code> 機能を
+有効化します。</p>
+
+<pre><code class="ruby">configure :build do
+  activate :minify_css
+  activate :minify_javascript
+end
+</code></pre>
+
+<p>ファイル名に <code>.min</code> を含む圧縮されたファイルを使っている場合,
+Middleman はそのファイルを最適化しません。作者によって事前に配慮された
+圧縮をおこなう jQuery のようなライブラリにはとても良い方法です。</p>
+
+<p><code>config.rb</code> で <code>:minify_javascript</code> 拡張を有効化した後に,
+<code>:js_compressor</code> オプションに Uglifier のカスタムインスタンスを設定することで
+JavaScript の圧縮方法をカスタマイズできます。詳細は <a href="https://github.com/lautis/uglifier">Uglifier&#39;s
+docs</a> を参照してください。</p>
+
+<p>例えば,
+次のように危険な最適化やトップレベル変数名のシンボル化を有効化できます:</p>
+
+<pre><code class="ruby">activate :minify_javascript
+set :js_compressor, ::Uglifier.new(:mangle =&gt; {:toplevel =&gt; true}, :compress =&gt; {:unsafe =&gt; true})
+</code></pre>
+
+<p><code>asset_hash</code> を有効にし, ロードバランサを使って複数サーバにサイトを構築,
+JavaScript の圧縮を行う場合には, mangle オプションが無効に指定されていることを
+確認してください。mangle オプションが有効な場合, Uglifier はサーバマシン毎に
+異なるバージョンの圧縮した JavaScript ファイルを作ります。
+そのファイルは異なるハッシュを含むファイル名で HTML の中の参照も
+バージョン毎に異なります。次のように設定します:</p>
+
+<pre><code class="ruby">set :js_compressor, Uglifier.new(:mangle =&gt; false)
+</code></pre>
+
+<p>特定のファイルをミニファイ処理から除外したい場合, これらの拡張を有効化する際に
+<code>:ignore</code> オプションを渡し, 無視するファイルを識別する 1 つ以上のパターンマッチ,
+正規表現や Proc を与えます。同じように, ファイル拡張子をリネームし変更するために
+<code>:exts</code> オプションを渡すこともできます。</p>
+
+<p><code>Gemfile</code> に次の gem を追加することで, JavaScript の圧縮(さらには CoffeeScript のビルド) を
+高速化できます。</p>
+
+<pre><code class="ruby">gem &#39;therubyracer&#39; # faster JS compiles
+gem &#39;oj&#39; # faster JS compiles
+</code></pre>
+
+<h2 id="テキストファイルの-gzip-化">テキストファイルの GZIP 化</h2>
+
+<p>対応するユーザエージェントに
+<a href="https://developer.yahoo.com/performance/rules.html#gzip">圧縮ファイルを配信する</a> のはいい方法です。
+多くの web サーバはオンザフライでファイルを gzip にする機能を持っていますが,
+ファイルが配信される度に CPU を使う必要があり, その結果としてほとんどのサーバでは
+最大圧縮が実行されません。 Middleman は通常のファイルと一緒に gzip バージョンの
+HTML, CSS や JavaScript を作ることができ, Web サーバに GZIP ファイルを
+直接配信するように命じることができます。
+まず, <code>:gzip</code> 拡張を有効化します:</p>
+
+<pre><code class="ruby">activate :gzip
+</code></pre>
+
+<p>そして, GZIP ファイルを配信するようにサーバを設定します。 Nginx を使用する場合,
+<a href="http://wiki.nginx.org/NginxHttpGzipStaticModule">gzip_static</a> モジュールを確認してください。
+Apache の場合, 少しトリッキーなことをしなければなりません。
+例として <a href="https://gist.github.com/2200790">Gist</a> を確認してください。</p>
+
+<h2 id="画像圧縮">画像圧縮</h2>
+
+<p>ビルド時に画像も圧縮したい場合,
+<a href="https://github.com/plasticine/middleman-imageoptim"><code>middleman-imageoptim</code></a> を試してみましょう。</p>
+
+<h2 id="html-圧縮">HTML 圧縮</h2>
+
+<p>Middleman は HTML 出力を圧縮する公式の拡張機能を提供しています。
+gem で簡単にインストールします:</p>
+
+<pre><code class="bash">gem install middleman-minify-html
+</code></pre>
+
+<p><code>Gemfile</code> に <code>middleman-minify-html</code> を追加します:</p>
+
+<pre><code class="ruby">gem &quot;middleman-minify-html&quot;
+</code></pre>
+
+<p>そして <code>config.rb</code> を開いて次を追加します:</p>
+
+<pre><code class="ruby">activate :minify_html
+</code></pre>
+
+<p>ソースを確認すると HTML が圧縮されていることがわかります。</p>
+
+<h2 id="source-sets-srcset-の使用">source sets (srcset) の使用</h2>
+
+<p>HTML に最近追加されたものに <code>img</code> や <code>picture</code> タグの <code>srcset</code> 属性があります。この属性は viewport (<code>1024w, 800w, 600w, や 320w</code> のような幅指定) やブラウザの解像度 (<code>1x, 2x, 3x, ...</code> のような値) によって異なる画像を異なるサイズでブラウザにロードできます。</p>
+
+<pre><code class="html">&lt;img src=&quot;img/100px.jpg&quot; srcset=&quot;img/300px.jpg 3x, img/200px.jpg 2x, img/100px.jpg 1x&quot;&gt;
+&lt;img src=&quot;img/100px.jpg&quot; srcset=&quot;img/300px.jpg 300w, img/200px.jpg 200w, img/100px.jpg 100w&quot;&gt;
+
+</code></pre>
+
+<p><code>:asset_hash</code> オプションと一緒に <code>secset</code> を使用したい場合, <a href="/jp/advanced/asset_pipeline/">アセットパイプラインのページ</a> に書かれている <code>image_path</code> ヘルパーを使用する必要があります。</p>
+
+<pre><code class="html">&lt;img src=&quot;&lt;%= image_path(&#39;100px.jpg&#39;) %&gt;&quot; srcset=&quot;&lt;%= image_path(&#39;300px.jpg&#39;) %&gt; 3x, &lt;%= image_path(&#39;200px.jpg&#39;) %&gt; 2x, &lt;%= image_path(&#39;100px.jpg&#39;) %&gt; 1x&quot;&gt;
+</code></pre>
+
+<p><a href="http://caniuse.com/#feat=srcset">caniuse.com</a> で確認できるように <code>srcset</code> 属性はまだすべてのブラウザでサポートされていません。<code>srcset</code> をサポートしないブラウザの場合フォールバックとして <code>src</code> 属性を使います。注意するポイントとして, 一部のブラウザではフォールバックとして <code>srcset</code> 属性の最初の値を使用します。上記の例で属性値の最初に最大の画像を入れているのはこのためです。</p>
+
+    </main>
+  </div>
+
+    <footer class="footer" data-waypoint="footer" role="contentinfo">
+  <div class="wrap-container">
+    <div class="footer-column">
+      <article class="footer-site-information">
+        <p>
+          &copy; 2011&ndash;2015 <a href="//awardwinningfjords.com">Thomas Reynolds</a>
+        </p>
+        <p class="footer-open-source-credit">
+          Maintained by the <a href="//github.com/orgs/middleman/people">core team</a> with help from
+            <a href="//github.com/middleman/middleman/graphs/contributors">contributors</a>.
+        </p>
+      </article>
+      <article class="footer-contact">
+        <ul class="footer-contact-list">
+          <li class="footer-contact-list-item twitter-link">
+            <a href="//twitter.com/middlemanapp">@middlemanapp</a>
+          </li>
+          <li class="footer-contact-list-item github-link">
+            <a href="//github.com/middleman/middleman">GitHub</a>
+          </li>
+        </ul>
+      </article>
+    </div>
+    <div class="footer-column footer-right">
+      <a href="https://formkeep.com?utm_source=middleman">
+        <span class="footer-formkeep-logo"></span>
+      </a>
+      <p class="footer-credit">
+        FormKeep provides
+
+        <a href="https://formkeep.com/?utm_source=middleman">form endpoints for Middleman sites</a>.
+      </p>
+    </div>
+  </div>
+</footer>
+
+    <script src="/javascripts/site.js"></script>
+    <script>
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-90027-21']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script');
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    ga.setAttribute('async', 'true');
+    document.documentElement.firstChild.appendChild(ga);
+  })();
+</script>
+<script>
+  var _gauges = _gauges || [];
+  (function() {
+    var t   = document.createElement('script');
+    t.type  = 'text/javascript';
+    t.async = true;
+    t.id    = 'gauges-tracker';
+    t.setAttribute('data-site-id', '4ef39d56613f5d017b000004');
+    t.src = '//secure.gaug.es/track.js';
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(t, s);
+  })();
+</script>
+  </body>
+</html>

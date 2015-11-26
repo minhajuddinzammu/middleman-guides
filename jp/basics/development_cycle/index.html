@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Middleman: 開発サイクル</title>
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic|Source+Code+Pro">
+    <link href="/stylesheets/site.css" rel="stylesheet" />
+  </head>
+  <body>
+      <header id="header">
+    <nav class="global-nav" role="navigation">
+  <section class="wrap-container">
+    <header class="global-nav-item logo-text">
+      <a class="global-nav-middleman-signature" href="/jp/">Middleman</a>
+      <a class="global-nav-middleman-logo" href="/jp/"><img src="/images/middleman-logo.svg" /></a>
+    </header>
+
+    <ul class="global-nav-list">
+      <li class="global-nav-item">
+        <a href="/jp/community/">Contribute</a>
+      </li>
+      <li class="global-nav-item">
+        <a class="cta-link-nav" href="/jp/basics/install/">Docs</a>
+      </li>
+    </ul>
+  </section>
+</nav>
+
+  </header>
+
+  <div class="body-content-container wrap-container" role="main">
+    <nav id="toc" class="sidebar" data-waypoint="sidebar">
+      <div id="search" role="search">
+  <form>
+    <input class="st-search-input" id="st-search-input" type="search" placeholder="Search the docs">
+  </form>
+  <div id="st-results-container"></div>
+  <script>
+    var Swiftype = window.Swiftype || {};
+    (function() {
+    Swiftype.key = 'q3qjGN5LmX2oq6w1V47y';
+    Swiftype.inputElement = '#st-search-input';
+    Swiftype.resultContainingElement = '#st-results-container';
+    Swiftype.attachElement = '#st-search-input';
+    Swiftype.renderStyle = "overlay";
+
+    var script = document.createElement('script');
+    script.type = 'text/javascript';
+    script.async = true;
+    script.src = "//swiftype.com/embed.js";
+    var entry = document.getElementsByTagName('script')[0];
+    entry.parentNode.insertBefore(script, entry);
+    }());
+  </script>
+</div>
+
+<div class="toc-block-container">
+  <div class="toc-block">
+    <h3 class="docs-section-heading">基礎</h3>
+    <ul>
+      <li class="doc-item">
+        <a href="/jp/basics/install/">インストール</a> </li>
+      <li class="doc-item">
+        <a href="/jp/basics/upgrade-v4/">v4 へのアップグレード</a> </li>
+      <li class="doc-item">
+        <a href="/jp/basics/start_new_site/">新しいサイトの作成</a>
+      </li>
+      <li class="doc-item">
+        <a href="/jp/basics/directory-structure/">ディレクトリ構造</a>
+      </li>
+      <li class="doc-item" >
+        <a href="/jp/basics/development_cycle/">開発サイクル</a>
+      </li>
+      <li class="doc-item">
+        <a href="/jp/basics/build_and_deploy/">ビルド & デプロイ</a>
+        </li>
+      <li class="doc-item">
+        <a href="/jp/basics/frontmatter/">Frontmatter</a>
+        </li>
+      <li class="doc-item">
+        <a href="/jp/basics/templating_language/">テンプレート言語</a>
+        </li>
+      <li class="doc-item">
+        <a href="/jp/basics/helper_methods/">ヘルパーメソッド</a>
+        </li>
+      <li class="doc-item">
+        <a href="/jp/basics/layouts/">レイアウト</a>
+        </li>
+      <li class="doc-item">
+        <a href="/jp/basics/partials/">パーシャル</a>
+        </li>
+      <li class="doc-item">
+        <a href="/jp/basics/blogging/">ブログ機能</a>
+        </li>
+    </ul>
+  </div>
+
+  <div class="toc-block">
+    <h3 class="docs-section-heading">高度な機能</h3>
+    <ul>
+      <li class="doc-item">
+        <a href="/jp/advanced/configuration/">設定</a>
+        </li>
+      <li class="doc-item">
+        <a href="/jp/advanced/project_templates/">プロジェクトテンプレート</a>
+        </li>
+      <li class="doc-item">
+        <a href="/jp/advanced/dynamic_pages/">動的ページ</a>
+        </li>
+      <li class="doc-item">
+        <a href="/jp/advanced/data_files/">データファイル</a>
+        </li>
+      <li class="doc-item">
+        <a href="/jp/advanced/localization/">多言語化 (i18n)</a>
+        </li>
+      <li class="doc-item">
+        <a href="/jp/advanced/asset_pipeline/">アセットパイプライン</a>
+        </li>
+      <li class="doc-item">
+        <a href="/jp/advanced/rack_middleware/">Rack ミドルウェア</a>
+        </li>
+      <li class="doc-item">
+        <a href="/jp/advanced/sitemap/">サイトマップ</a>
+        </li>
+      <li class="doc-item">
+        <a href="/jp/advanced/pretty_urls/">きれいな URL (ディレクトリインデックス)</a>
+        </li>
+      <li class="doc-item">
+        <a href="/jp/advanced/improving_cacheability/">キャッシュ機能の改善</a>
+        </li>
+      <li class="doc-item">
+        <a href="/jp/advanced/file_size_optimization/">ファイルサイズ最適化</a>
+        </li>
+      <li class="doc-item">
+        <a href="/jp/advanced/custom_extensions/">カスタム拡張</a>
+        </li>
+    </ul>
+  </div>
+
+  <div class="toc-block">
+    <h3 class="docs-section-heading">コミュニティ</h3>
+    <ul>
+      <li class="doc-item">
+        <a href="https://directory.middlemanapp.com/#/extensions/all/">拡張機能</a>
+      </li>
+      <li class="doc-item">
+        <a href="https://directory.middlemanapp.com/#/templates/all/">プロジェクトテンプレート</a>
+        </li>
+      <li class="doc-item">
+        <a href="https://directory.middlemanapp.com/#/extensions/deployment/">デプロイ方法</a>
+        </li>
+      <li class="doc-item">
+        <a target="_blank" href="https://forum.middlemanapp.com/">コミュニティフォーラム</a>
+        </li>
+      <li class="doc-item">
+        <a target="_blank" href="https://github.com/middleman/middleman">GitHub リポジトリ</a>
+        </li>
+      <li class="doc-item">
+        <a href="/jp/community/built_using_middleman/">Middleman 採用サイト</a>
+        </li>
+    </ul>
+  </div>
+</div>
+
+    </nav>
+
+    <main class="main" role="main" data-waypoint="main">
+      <h1 id="開発サイクル">開発サイクル</h1>
+
+<h2 id="middleman-server">Middleman Server</h2>
+
+<p>Middleman は開発のスタート時点から開発コードとプロダクションコードを分離します。
+これにより開発中にプロダクションでは
+不要もしくは望ましくないツール群 (<a href="http://haml-lang.com">Haml</a> や
+<a href="http://sass-lang.com">Sass</a> などのような) を開発中に利用することが
+できます。開発サイクルや静的サイトのビルドを
+これらの環境に依存することができます。</p>
+
+<p>Middleman を使う時間の大半は開発サイクルに
+なります。</p>
+
+<p>コマンドラインから, プロジェクトフォルダの中でプレビューサーバを
+起動してください:</p>
+
+<pre><code class="bash">$ cd my_project
+$ bundle exec middleman server
+</code></pre>
+
+<p>このコマンドはローカルの Web サーバを起動します: <code>http://localhost:4567/</code></p>
+
+<p><code>source</code> フォルダでファイルを作成編集し, プレビュー Web サーバ上で
+反映された変更を確認することができます。</p>
+
+<p>コマンドラインから <code>CTRL-C</code> を使ってプレビューサーバを停止できます。</p>
+
+<h3 id="飾りのない-middleman-コマンド">飾りのない middleman コマンド</h3>
+
+<p>コマンド指定なしの <code>middleman</code> の使用はサーバの起動と同じです。</p>
+
+<pre><code class="bash">$ bundle exec middleman
+</code></pre>
+
+<p>このコマンドは <code>middleman server</code> と同じ動作をします。</p>
+
+<h2 id="livereload">LiveReload</h2>
+
+<p>Middleman にはサイト内のファイルを編集するたびにブラウザを自動的にリロードする拡張がついています。
+まず Gemfile に <code>middleman-livereload</code> があることを確認してください。続いて <code>config.rb</code> を開いて次の行を追加してください。</p>
+
+<pre><code class="ruby">activate :livereload
+</code></pre>
+
+<p>これであなたのブラウザはページ内容に変更があると自動的にリロードされます。</p>
+
+<h3 id="css-のリロード">CSS のリロード</h3>
+
+<p>デフォルト設定では middleman は <code>stylesheets/application.css</code> の CSS パーシャルが変更された場合リロードします。
+<code>:bundle_file_css</code> に異なるファイル名を設定することができます。<code>nil</code> を指定するとすべての CSS ファイルでリロードが行われます。</p>
+
+    </main>
+  </div>
+
+    <footer class="footer" data-waypoint="footer" role="contentinfo">
+  <div class="wrap-container">
+    <div class="footer-column">
+      <article class="footer-site-information">
+        <p>
+          &copy; 2011&ndash;2015 <a href="//awardwinningfjords.com">Thomas Reynolds</a>
+        </p>
+        <p class="footer-open-source-credit">
+          Maintained by the <a href="//github.com/orgs/middleman/people">core team</a> with help from
+            <a href="//github.com/middleman/middleman/graphs/contributors">contributors</a>.
+        </p>
+      </article>
+      <article class="footer-contact">
+        <ul class="footer-contact-list">
+          <li class="footer-contact-list-item twitter-link">
+            <a href="//twitter.com/middlemanapp">@middlemanapp</a>
+          </li>
+          <li class="footer-contact-list-item github-link">
+            <a href="//github.com/middleman/middleman">GitHub</a>
+          </li>
+        </ul>
+      </article>
+    </div>
+    <div class="footer-column footer-right">
+      <a href="https://formkeep.com?utm_source=middleman">
+        <span class="footer-formkeep-logo"></span>
+      </a>
+      <p class="footer-credit">
+        FormKeep provides
+
+        <a href="https://formkeep.com/?utm_source=middleman">form endpoints for Middleman sites</a>.
+      </p>
+    </div>
+  </div>
+</footer>
+
+    <script src="/javascripts/site.js"></script>
+    <script>
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-90027-21']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script');
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    ga.setAttribute('async', 'true');
+    document.documentElement.firstChild.appendChild(ga);
+  })();
+</script>
+<script>
+  var _gauges = _gauges || [];
+  (function() {
+    var t   = document.createElement('script');
+    t.type  = 'text/javascript';
+    t.async = true;
+    t.id    = 'gauges-tracker';
+    t.setAttribute('data-site-id', '4ef39d56613f5d017b000004');
+    t.src = '//secure.gaug.es/track.js';
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(t, s);
+  })();
+</script>
+  </body>
+</html>

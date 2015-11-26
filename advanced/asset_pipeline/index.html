@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Middleman: Asset Pipeline</title>
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic|Source+Code+Pro">
+    <link href="/stylesheets/site.css" rel="stylesheet" />
+  </head>
+  <body>
+      <header id="header">
+    <nav class="global-nav" role="navigation">
+  <section class="wrap-container">
+    <header class="global-nav-item logo-text">
+      <a class="global-nav-middleman-signature" href="/">Middleman</a>
+      <a class="global-nav-middleman-logo" href="/"><img src="/images/middleman-logo.svg" /></a>
+    </header>
+
+    <ul class="global-nav-list">
+      <li class="global-nav-item">
+        <a href="/community/">Contribute</a>
+      </li>
+      <li class="global-nav-item">
+        <a class="cta-link-nav" href="/basics/install/">Docs</a>
+      </li>
+    </ul>
+  </section>
+</nav>
+
+  </header>
+
+  <div class="body-content-container wrap-container" role="main">
+    <nav id="toc" class="sidebar" data-waypoint="sidebar">
+      <div id="search" role="search">
+  <form>
+    <input class="st-search-input" id="st-search-input" type="search" placeholder="Search the docs">
+  </form>
+  <div id="st-results-container"></div>
+  <script>
+    var Swiftype = window.Swiftype || {};
+    (function() {
+    Swiftype.key = 'q3qjGN5LmX2oq6w1V47y';
+    Swiftype.inputElement = '#st-search-input';
+    Swiftype.resultContainingElement = '#st-results-container';
+    Swiftype.attachElement = '#st-search-input';
+    Swiftype.renderStyle = "overlay";
+
+    var script = document.createElement('script');
+    script.type = 'text/javascript';
+    script.async = true;
+    script.src = "//swiftype.com/embed.js";
+    var entry = document.getElementsByTagName('script')[0];
+    entry.parentNode.insertBefore(script, entry);
+    }());
+  </script>
+</div>
+
+<div class="toc-block-container">
+  <div class="toc-block">
+    <h3 class="docs-section-heading">Basics</h3>
+    <ul>
+      <li class="doc-item">
+        <a href="/basics/install/">Install</a> </li>
+      <li class="doc-item">
+        <a href="/basics/upgrade-v4/">Upgrading to v4</a> </li>
+      <li class="doc-item">
+        <a href="/basics/start_new_site/">Start a New Site</a>
+      </li>
+      <li class="doc-item">
+        <a href="/basics/directory-structure/">Directory Structure</a>
+      </li>
+      <li class="doc-item" >
+        <a href="/basics/development_cycle/">Development Cycle</a>
+      </li>
+      <li class="doc-item">
+        <a href="/basics/build_and_deploy/">Build & Deploy</a>
+        </li>
+      <li class="doc-item">
+        <a href="/basics/frontmatter/">Frontmatter</a>
+        </li>
+      <li class="doc-item">
+        <a href="/basics/templating_language/">Templating Language</a>
+        </li>
+      <li class="doc-item">
+        <a href="/basics/helper_methods/">Helper Methods</a>
+        </li>
+      <li class="doc-item">
+        <a href="/basics/layouts/">Layouts</a>
+        </li>
+      <li class="doc-item">
+        <a href="/basics/partials/">Partials</a>
+        </li>
+      <li class="doc-item">
+        <a href="/basics/blogging/">Blogging</a>
+        </li>
+    </ul>
+  </div>
+
+  <div class="toc-block">
+    <h3 class="docs-section-heading">Advanced</h3>
+    <ul>
+      <li class="doc-item">
+        <a href="/advanced/configuration/">Configuring Your Site</a>
+        </li>
+      <li class="doc-item">
+        <a href="/advanced/project_templates/">Project Templates</a>
+        </li>
+      <li class="doc-item">
+        <a href="/advanced/dynamic_pages/">Dynamic Pages</a>
+        </li>
+      <li class="doc-item">
+        <a href="/advanced/data_files/">Data Files</a>
+        </li>
+      <li class="doc-item">
+        <a href="/advanced/localization/">Localization (i18n)</a>
+        </li>
+      <li class="doc-item">
+        <a href="/advanced/asset_pipeline/">Asset Pipeline</a>
+        </li>
+      <li class="doc-item">
+        <a href="/advanced/rack_middleware/">Rack Middleware</a>
+        </li>
+      <li class="doc-item">
+        <a href="/advanced/sitemap/">The Sitemap</a>
+        </li>
+      <li class="doc-item">
+        <a href="/advanced/pretty_urls/">Pretty URLs (Directory Indexes)</a>
+        </li>
+      <li class="doc-item">
+        <a href="/advanced/improving_cacheability/">Improving Cacheability</a>
+        </li>
+      <li class="doc-item">
+        <a href="/advanced/file_size_optimization/">File Size Optimization</a>
+        </li>
+      <li class="doc-item">
+        <a href="/advanced/custom_extensions/">Custom Extensions</a>
+        </li>
+    </ul>
+  </div>
+
+  <div class="toc-block">
+    <h3 class="docs-section-heading">Open-Source Community</h3>
+    <ul>
+      <li class="doc-item">
+        <a href="https://directory.middlemanapp.com/#/extensions/all/">Custom Extensions</a>
+      </li>
+      <li class="doc-item">
+        <a href="https://directory.middlemanapp.com/#/templates/all/">Project Templates</a>
+        </li>
+      <li class="doc-item">
+        <a href="https://directory.middlemanapp.com/#/extensions/deployment/">Deployment Solution</a>
+        </li>
+      <li class="doc-item">
+        <a target="_blank" href="https://forum.middlemanapp.com/">Community Forum</a>
+        </li>
+      <li class="doc-item">
+        <a target="_blank" href="https://github.com/middleman/middleman">GitHub Repository</a>
+        </li>
+      <li class="doc-item">
+        <a href="/community/built_using_middleman/">Sites Built Using Middleman</a>
+        </li>
+    </ul>
+  </div>
+</div>
+
+    </nav>
+
+    <main class="main" role="main" data-waypoint="main">
+      <h1 id="asset-pipeline">Asset Pipeline</h1>
+
+<h2 id="dependency-management">Dependency Management</h2>
+
+<p><a href="https://github.com/sstephenson/sprockets">Sprockets</a> is a tool for managing libraries of JavaScript (and CoffeeScript)
+code, declaring dependency management and include 3rd-party code. At its core,
+Sprockets makes a <code>require</code> method available inside your .js and .coffee files
+which can pull in the contents of an external file from your project or from a
+3rd party gem.</p>
+
+<p>Say I have a file called <code>jquery.js</code> which contains the jQuery library and
+another file called <code>app.js</code> which contains my application code. My app file
+can include jquery before it runs like so:</p>
+
+<pre><code class="javascript">//= require &quot;jquery&quot;
+
+$(document).ready(function() {
+  $(&quot;.item&quot;).pluginCode({
+    param1: true,
+    param2: &quot;maybe&quot;
+  });
+});
+</code></pre>
+
+<p>This system also works within CSS files:</p>
+
+<pre><code class="css">/*
+ *= require base
+ */
+
+body {
+  font-weight: bold;
+}
+
+</code></pre>
+
+<p>If you&#39;re using Sass you should stick with Sass&#39; <code>@import</code> rule rather than
+using Sprockets directives.</p>
+
+<h2 id="deploying-combined-assets-only">Deploying combined assets only</h2>
+
+<p>If you prefer to deploy only the combined (concatenated) assets to the <code>build</code>
+directory with <code>middleman build</code> command, you should use the underscore-names
+for your ingredient assets. Example: the main <code>/source/javascripts/all.js</code> file
+is used for all dependencies:</p>
+
+<pre><code class="javascript">//= require &quot;_jquery&quot;
+//= require &quot;_my_lib_code&quot;
+//= require &quot;_my_other_code&quot;
+</code></pre>
+
+<p>and the <code>/source/javascripts/</code> directory should contain files: <code>_jquery.js</code>,
+<code>_my_lib_code.js</code>, <code>_my_other_code.js</code>. The resulting <code>/build/javascripts/</code>
+directory will contain the <code>all.js</code> file only, with all dependant code
+included.</p>
+
+<h2 id="asset-gems">Asset Gems</h2>
+
+<p>You can use assets from gems by including them in your <code>Gemfile</code>, like this:</p>
+
+<pre><code class="ruby">gem &quot;bootstrap-sass&quot;, :require =&gt; false
+</code></pre>
+
+<p>The <code>:require =&gt; false</code> bit is important - many of these gems assume you&#39;re
+running in Rails, and break when they try to hook into Rails&#39; or Compass&#39;
+internals. Just avoid requiring the gems and Middleman will take care of the
+rest.</p>
+
+<p>Once you&#39;ve added a dependency on these gems, any images and fonts from the gem
+will be included in your project automatically. JavaScript and CSS are also
+available to be <code>require</code>ed or <code>@import</code>ed into your own files.</p>
+
+<p>If you want to refer to a gem stylesheet or JS file directly from your HTML
+rather than including it in your own assets, you&#39;ll need to import it
+explicitly in <code>config.rb</code>:</p>
+
+<pre><code class="ruby">sprockets.import_asset &#39;jquery-mobile&#39;
+</code></pre>
+
+<p>Then you can refer to that asset directly from <code>script</code> tags or
+<code>javascript_include_tag</code>.</p>
+
+<h2 id="sprockets-import-path">Sprockets Import Path</h2>
+
+<p>If you have assets in directories other than your <code>:js_dir</code> or <code>:css_dir</code>, you
+can make them importable by adding them to your Sprockets import path. </p>
+
+<p><em>Warning</em> Make sure that you add a directory via <code>#append_path</code> only once,
+otherwise you will get duplicate entries in <code>middleman</code>&#39;s site map - one entry
+for each directory entry in the <code>#appended_paths</code> list. This might cause
+doubled building times, build conflicts if you minify your assets etc.</p>
+
+<p>Add this to your <code>config.rb</code>:</p>
+
+<pre><code class="ruby"># String
+sprockets.append_path &#39;/my/shared/assets1/&#39;
+
+# Pathname is also supported
+sprockets.append_path Pathname.new(&#39;/my/shared/assets2/&#39;)
+</code></pre>
+
+<p>If you have a list of directories and want to iterate over it, you can use this
+small code snippet to make sure every directory is only added once:</p>
+
+<pre><code class="ruby">%w(path1 longer/path2 longer/path3).each do |path|
+  next if sprockets.appended_paths.include? path
+
+  sprockets.append_path path
+end
+</code></pre>
+
+<p>Sprockets supports Bower, so you can add your Bower components path directly:</p>
+
+<pre><code class="ruby">sprockets.append_path File.join root, &#39;bower_components&#39;
+</code></pre>
+
+<p>To make your bower controlled assets - images, fonts etc. - available within
+your application, you need to import them using <code>sprockets.import_asset</code>. Given
+your component is called <code>jquery</code>, you can import all files mentioned in the
+<a href="https://github.com/bower/bower.json-spec"><code>main</code>-section</a> of the <code>bower.json</code>
+by using the following statement in your <code>config.rb</code>:</p>
+
+<pre><code class="ruby">sprockets.import_asset &#39;jquery&#39;
+</code></pre>
+
+<p>If you prefer to import a specific asset you need to use its relative path,
+which is <code>&lt;component_name&gt;/&lt;path_to_asset&gt;</code>:</p>
+
+<pre><code class="ruby">sprockets.import_asset &#39;jquery/dist/jquery.js&#39;
+</code></pre>
+
+<p>If you need to set an individual output path, you can pass <code>#import_asset</code>
+a block. This block gets the logical path of the asset as <code>Pathname</code> and needs
+to return the output path for the asset.</p>
+
+<pre><code class="ruby">sprockets.import_asset(&#39;jquery/dist/jquery.js&#39;) do |logical_path|
+  Pathname.new(&#39;javascripts_new.d&#39;) + logical_path
+  # =&gt; javascripts_new.d/jquery/dist/jquery.js
+end
+</code></pre>
+
+<p>Make sure to use parentheses for <code>#import_asset</code> if you are using curly braces
+for the block! Otherwise the block might get passed to another method and not
+to <code>#import_asset</code> and you wonder why the output path is not set correctly.</p>
+
+<pre><code class="ruby">sprockets.import_asset(&#39;jquery/dist/jquery.js&#39;) { |logical_path| Pathname.new(&#39;javascripts_new.d&#39;) + logical_path }
+</code></pre>
+
+<p>To automate this a bit, you can use file lists from
+<a href="https://github.com/jimweirich/rake">rake</a>. Another option might be
+<a href="https://github.com/sstephenson/hike">hike</a>. You CANNOT use
+<code>sprockets.each_file</code> for this, because <code>sprockets</code> on top-level in <code>config.rb</code>
+is a <a href="https://github.com/middleman/middleman-sprockets/blob/master/lib/middleman-sprockets/config_only_environment.rb">faked sprocket
+environment</a>
+and therefor this method is not available. But be careful, you might need to add <code>gem
+&quot;rake&quot;</code> or <code>gem &quot;hike&quot;</code> to your project-<code>Gemfile</code> to make this work.</p>
+
+<pre><code class="ruby">require &#39;rake/file_list&#39;
+require &#39;pathname&#39;
+
+bower_directory = &#39;vendor/assets/components&#39;
+
+# Build search patterns
+patterns = [
+  &#39;.png&#39;,  &#39;.gif&#39;, &#39;.jpg&#39;, &#39;.jpeg&#39;, &#39;.svg&#39;, # Images
+  &#39;.eot&#39;,  &#39;.otf&#39;, &#39;.svc&#39;, &#39;.woff&#39;, &#39;.ttf&#39;, # Fonts
+  &#39;.js&#39;,                                    # Javascript
+].map { |e| File.join(bower_directory, &quot;**&quot;, &quot;*#{e}&quot; ) }
+
+# Create file list and exclude unwanted files
+Rake::FileList.new(*patterns) do |l|
+  l.exclude(/src/)
+  l.exclude(/test/)
+  l.exclude(/demo/)
+  l.exclude { |f| !File.file? f }
+end.each do |f|
+  # Import relative paths
+  sprockets.import_asset(Pathname.new(f).relative_path_from(Pathname.new(bower_directory)))
+end
+</code></pre>
+
+<h2 id="helpers">Helpers</h2>
+
+<p>There are helpers available to be used within your <code>*.scss</code> files:</p>
+
+<ul>
+<li><code>image_path()</code>, <code>image_url()</code></li>
+<li><code>font_path()</code>, <code>font_url()</code></li>
+</ul>
+
+<p>Those helpers prepend the correct directory/url to your asset, e.g.
+<code>image_path(&#39;lightbox2/img/close.png&#39;)</code> becomes
+<code>images/lightbox2/img/close.png</code>. To reference a bower controlled asset you
+need to use its relative name <code>lightbox2/img/close.png</code> for an image which is
+part of the <code>lightbox2</code>-component.</p>
+
+<h2 id="compass">Compass</h2>
+
+<p>Middleman comes with <a href="http://compass-style.org">Compass</a> support out of the box. Compass is a powerful
+framework for writing cross-browser stylesheets in Sass. Compass also has its
+own extensions, like <a href="http://susy.oddbird.net">Susy</a>, which you can use in Middleman. All of Sprockets&#39;
+path helpers like <code>image_url</code> are hooked into the Middleman Sitemap, so other
+extensions (like <code>:asset_hash</code>) will affect your stylesheets too.</p>
+
+    </main>
+  </div>
+
+    <footer class="footer" data-waypoint="footer" role="contentinfo">
+  <div class="wrap-container">
+    <div class="footer-column">
+      <article class="footer-site-information">
+        <p>
+          &copy; 2011&ndash;2015 <a href="//awardwinningfjords.com">Thomas Reynolds</a>
+        </p>
+        <p class="footer-open-source-credit">
+          Maintained by the <a href="//github.com/orgs/middleman/people">core team</a> with help from
+            <a href="//github.com/middleman/middleman/graphs/contributors">contributors</a>.
+        </p>
+      </article>
+      <article class="footer-contact">
+        <ul class="footer-contact-list">
+          <li class="footer-contact-list-item twitter-link">
+            <a href="//twitter.com/middlemanapp">@middlemanapp</a>
+          </li>
+          <li class="footer-contact-list-item github-link">
+            <a href="//github.com/middleman/middleman">GitHub</a>
+          </li>
+        </ul>
+      </article>
+    </div>
+    <div class="footer-column footer-right">
+      <a href="https://formkeep.com?utm_source=middleman">
+        <span class="footer-formkeep-logo"></span>
+      </a>
+      <p class="footer-credit">
+        FormKeep provides
+
+        <a href="https://formkeep.com/?utm_source=middleman">form endpoints for Middleman sites</a>.
+      </p>
+    </div>
+  </div>
+</footer>
+
+    <script src="/javascripts/site.js"></script>
+    <script>
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-90027-21']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script');
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    ga.setAttribute('async', 'true');
+    document.documentElement.firstChild.appendChild(ga);
+  })();
+</script>
+<script>
+  var _gauges = _gauges || [];
+  (function() {
+    var t   = document.createElement('script');
+    t.type  = 'text/javascript';
+    t.async = true;
+    t.id    = 'gauges-tracker';
+    t.setAttribute('data-site-id', '4ef39d56613f5d017b000004');
+    t.src = '//secure.gaug.es/track.js';
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(t, s);
+  })();
+</script>
+  </body>
+</html>
